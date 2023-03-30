@@ -1,0 +1,41 @@
+/* Define a responsive grid layout for the main content */
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Make the header and footer span the full width of the page */
+  header, footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+  }
+  
+  /* Style the navigation */
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  nav li {
+    margin-left: 20px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Style the "Home" and "Contact" links to be larger on smaller screens */
+  @media (max-width: 600px) {
+    nav a[href="#home"], nav a[href="#contact"] {
+      font-size: 18px;
+    }
+  }
+  
